@@ -1,0 +1,170 @@
+body {
+  all: unset;
+}
+
+.controller {
+    display: grid;
+    max-width: 500px;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+/* Position */
+.leftTriggers {
+    grid-column: 1 / 1;
+}
+
+.rightTriggers {
+    grid-column: 4 / 4;
+}
+
+.arrows {
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+}
+
+.buttons {
+    grid-column: 4 / 4;
+    grid-row: 2 / 2;
+}
+
+.leftStick {
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
+}
+
+.rightStick {
+    grid-column: 3 / 3;
+    grid-row: 3 / 3;
+}
+
+/* Styling of buttons */
+.leftTriggers, .rightTriggers {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+
+.leftTriggers_up, .rightTriggers_up {
+    height: 15%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 100% 100% 0 0;
+}
+
+.leftTriggers_down, .rightTriggers_down {
+    height: 25%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 100% 100%;
+}
+
+.leftTriggers, .rightTriggers {
+    width: 80%;
+}
+
+.leftTriggers {
+    margin-left: auto;
+}
+
+.rightTriggers {
+    margin-right: auto;
+}
+
+.arrows, .buttons {
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: grid;
+    gap: 5%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.arrows_up, .buttons_up {
+    grid-column: 2 / 2;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.arrows_left, .buttons_left {
+    grid-row: 2 / 2;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.arrows_right, .buttons_right {
+    grid-row: 2 / 2;
+    grid-column: 3 / 3;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.arrows_down, .buttons_down {
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.arrows_left, .arrows_right, .arrows_up, .arrows_down {
+  background-color: rgba(0, 0, 0, 0.1);
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  border-radius: 20% 0 0 20%;
+}
+
+.arrows_up {
+  transform: rotate(90deg);
+}
+
+.arrows_right {
+  transform: rotate(180deg);
+}
+
+.arrows_down {
+  transform: rotate(270deg);
+}
+
+.buttons_down, .buttons_left, .buttons_right, .buttons_up {
+    border-radius: 50%;
+}
+
+.leftStick, .rightStick {
+    place-self: center center;
+    width: 70%;
+    aspect-ratio: 1/1;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    position: relative;
+}
+
+.leftStick_dot, .rightStick_dot {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Styling of text */
+table {
+  width: 100%;
+  max-width: 500px;
+  border-collapse: collapse;
+}
+
+table th {
+  width: 20%;
+}
+
+table td {
+  width: 80%;
+}
+
+th, td {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2; /* Light grey background for headers */
+  color: #333; /* Darker text color for headers */
+}
